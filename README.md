@@ -11,7 +11,7 @@ We modelled the transition of the relative frequency of K types of viral lineage
 
 
 ![\sum_{n=1}^{N}a_n](https://latex.codecogs.com/gif.latex?\sum_{n=1}^{N}a_n)  
-![\bm{\mu_t}=\bm{b_0}+\bm{b_1}t](https://latex.codecogs.com/gif.latex?\bm{\mu_t}=\bm{b_0}+\bm{b_1}t)
+![\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t](https://latex.codecogs.com/gif.latex?\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t)
 
 
 
