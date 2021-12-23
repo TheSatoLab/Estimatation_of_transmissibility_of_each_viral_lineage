@@ -6,20 +6,16 @@ To estimate the relative transmissibility of each SARS-CoV-2 lineage, we establi
 We modelled the transition of the relative frequency of K types of viral lineages with a Bayesian multinomial logistic model as below:  
 
 
-
-![\boldsymbol{\theta_t} = softmax(\boldsymbol{\mu_t})](https://latex.codecogs.com/gif.latex?\boldsymbol{\theta_t} = softmax(\boldsymbol{\mu_t}))  
-
-
-![\sum_{n=1}^{N}a_n](https://latex.codecogs.com/gif.latex?\sum_{n=1}^{N}a_n)  
-![\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t](https://latex.codecogs.com/gif.latex?\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t)
+![\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t](https://latex.codecogs.com/gif.latex?\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t)  
+![\boldsymbol{\theta_t}=softmax(\boldsymbol{\mu_t})](https://latex.codecogs.com/gif.latex?\boldsymbol{\theta_t}=softmax(\boldsymbol{\mu_t}))  
+![N_t=\sum_{1\lek\leK}\boldsymbol{Y_{tk}}](https://latex.codecogs.com/gif.latex?N_t=\sum_{1\lek\leK}\boldsymbol{Y_{tk}})  
+![softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{1\lej\leJ}exp(\boldsymbol{x}_j)}](https://latex.codecogs.com/gif.latex?softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{1\lej\leJ}exp(\boldsymbol{x}_j)})  
 
 
 
-\bm{\mu_t} = \bm{b_0} + \bm{b_1} t
-\boldsymbol{\theta_t} = softmax(\boldsymbol{\mu_t})
-N_t = \sum_{1\le k\le K} \boldsymbol{Y_{tk}}
-\boldsymbol{Y_t}  ~  Multinomial(N_t, \boldsymbol{\theta_t})
-softmax(\boldsymbol{x}) = \frac{exp(\boldsymbol{x})}{\sum_{1\le j\le J} exp(\boldsymbol{x}_j)}
+N_t=\sum_{1\lek\leK}\boldsymbol{Y_{tk}}
+\boldsymbol{Y_t}~Multinomial(N_t,\boldsymbol{\theta_t})
+softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{1\lej\leJ}exp(\boldsymbol{x}_j)}
 
 
 
