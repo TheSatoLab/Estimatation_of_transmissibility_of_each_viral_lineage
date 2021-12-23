@@ -8,7 +8,7 @@ We modelled the transition of the relative frequency of K types of viral lineage
 ![\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t](https://latex.codecogs.com/gif.latex?\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t)  
 ![\boldsymbol{\theta_t}=softmax(\boldsymbol{\mu_t})](https://latex.codecogs.com/gif.latex?\boldsymbol{\theta_t}=softmax(\boldsymbol{\mu_t}))  
 ![N_t=\sum_{k=1}^{K}\boldsymbol{Y_{tk}}](https://latex.codecogs.com/gif.latex?N_t=\sum_{k=1}^{K}\boldsymbol{Y_{tk}})  
-![\boldsymbol{Y_t}$\sim$Multinomial(N_t,\boldsymbol{\theta_t})](https://latex.codecogs.com/gif.latex?\boldsymbol{Y_t}$\sim$Multinomial(N_t,\boldsymbol{\theta_t}))  
+![\boldsymbol{Y_t}\tilde{}Multinomial(N_t,\boldsymbol{\theta_t})](https://latex.codecogs.com/gif.latex?\boldsymbol{Y_t}\tilde{}Multinomial(N_t,\boldsymbol{\theta_t}))  
 
 
 
