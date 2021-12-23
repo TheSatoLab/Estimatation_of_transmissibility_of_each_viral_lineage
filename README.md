@@ -28,7 +28,11 @@ Parameter estimation was performed by the framework of Bayesian statistical infe
 
 ## Contents
 * script
-	* run_model.R
-	* multinomial.stan
+	* **run_model.R:** main script
+	* **multinomial.stan:** stan model file
 * input
-	* input.count_matrix.txt
+	* **input.count_matrix.txt:** a count matrix representing the abundance of respective viral lineages (column) in respective time bins (row)
+
+* output
+	* **MCMC_samples.txt:** output file containing MCMC samples 
+	* **credible_interval.txt:** output file containing credible intervals
