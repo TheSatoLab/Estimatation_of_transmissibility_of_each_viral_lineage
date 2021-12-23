@@ -1,7 +1,7 @@
-# Estimatation of transmissibility of each viral lineage
+# Estimatation of the transmissibility of each viral lineage
 
 ## Summary
-	To estimate the relative transmissibility of each SARS-CoV-2 lineage, we established a statistical model to represent the epidemic dynamics of each viral lineage based on the viral genomic surveillance data.  
+To estimate the relative transmissibility of each SARS-CoV-2 lineage, we established a statistical model to represent the epidemic dynamics of each viral lineage based on the viral genomic surveillance data.  
 
 We modelled the transition of the relative frequency of K types of viral lineages with a Bayesian multinomial logistic model as below:  
 
@@ -16,7 +16,7 @@ Where _**b<sub>0</sub>**_, _**b<sub>1</sub>**_, _**mu<sub>t</sub>**_, _**theta<s
 
 _**Y<sub>t</sub>**_ is generated from  _**theta<sub>t</sub>**_ and  N<sub>t</sub> representing the total count of all lineages at t, according to a Multinomial distribution.  
 
-	Relative growth rate per generation (i.e., transmissibility) of respective viral lineages (_**r**_, a vector with K elements) was calculated according to the slope parameter _**b<sub>1</sub>**_ in the model above with the assumption of a fixed generation time. The growth rate _**r**_ was defined as:  
+Relative growth rate per generation (i.e., transmissibility) of respective viral lineages (_**r**_, a vector with K elements) was calculated according to the slope parameter _**b<sub>1</sub>**_ in the model above with the assumption of a fixed generation time. The growth rate _**r**_ was defined as:  
 
 ![\boldsymbol{r}=exp(\gamma/w\boldsymbol{b_1})](https://latex.codecogs.com/gif.latex?\boldsymbol{r}=exp(\gamma/w\boldsymbol{b_1}))  
 
