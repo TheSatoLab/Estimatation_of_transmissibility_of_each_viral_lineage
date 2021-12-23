@@ -1,7 +1,7 @@
 # Estimatation of transmissibility of each viral lineage
 
 ## Summary
-To estimate the relative transmissibility of each SARS-CoV-2 lineage, we established a statistical model to represent the epidemic dynamics of each viral lineage based on the viral genomic surveillance data.  
+	To estimate the relative transmissibility of each SARS-CoV-2 lineage, we established a statistical model to represent the epidemic dynamics of each viral lineage based on the viral genomic surveillance data.  
 
 We modelled the transition of the relative frequency of K types of viral lineages with a Bayesian multinomial logistic model as below:  
 
@@ -14,7 +14,14 @@ Where _**b<sub>0</sub>**_, _**b<sub>1</sub>**_, _**mu<sub>t</sub>**_, _**theta<s
 
 ![softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{1\lej\leJ}exp(\boldsymbol{x}_j)}](https://latex.codecogs.com/gif.latex?softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{j=1}^{J}exp(\boldsymbol{x}_j)})  
 
+_**Y<sub>t</sub>**_ is generated from  _**theta<sub>t</sub>**_ and  N<sub>t</sub> representing the total count of all lineages at t, according to a Multinomial distribution.  
 
+	Relative growth rate per generation (i.e., transmissibility) of respective viral lineages (_**r**_, a vector with K elements) was calculated according to the slope parameter _**b<sub>1</sub>**_ in the model above with the assumption of a fixed generation time. The growth rate _**r**_ was defined as:  
+
+![\boldsymbol{r}=exp(\gamma/w\boldsymbol{b_1})](https://latex.codecogs.com/gif.latex?\boldsymbol{r}=exp(\gamma/w\boldsymbol{b_1}))  
+
+Where  and  are the viral generation time (5.5 days) and the time bin size (3 days), respectively. For the parameter estimation, the intercept and slope parameters of the 1st lineage (lineage ID = 1) were fixed at 0. Consequently, the growth rates of respective lineages were estimated as those relative to that of the 1st lineage.
+Parameter estimation was performed by the framework of Bayesian statistical inference with Markov chain Monte Carlo methods (MCMC) implemented in Stan (https://mc-stan.org). Non-informative priors were set for all parameters. Four independent MCMC chains were run with 2,000 and 3,000 steps of warmup and sampling iterations, respectively.
 
 
 
