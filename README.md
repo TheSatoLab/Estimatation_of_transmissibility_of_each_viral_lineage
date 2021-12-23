@@ -8,20 +8,26 @@ The input data is a count matrix representing the abundance of respective viral 
 
 We modeled the transition of the relative frequency of K types of viral lineages with a Bayesian multinomial logistic model as below:  
 
+<p align="center">
 ![\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t](https://latex.codecogs.com/gif.latex?\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t)  
 ![\boldsymbol{\theta_t}=softmax(\boldsymbol{\mu_t})](https://latex.codecogs.com/gif.latex?\boldsymbol{\theta_t}=softmax(\boldsymbol{\mu_t}))  
 ![N_t=\sum_{k=1}^{K}\boldsymbol{Y_{tk}}](https://latex.codecogs.com/gif.latex?N_t=\sum_{k=1}^{K}\boldsymbol{Y_{tk}})  
 ![\boldsymbol{Y_t}\hspace{1em}\widetilde{}\hspace{1em}Multinomial(N_t,\boldsymbol{\theta_t})](https://latex.codecogs.com/gif.latex?\boldsymbol{Y_t}\hspace{1em}\widetilde{}\hspace{1em}Multinomial(N_t,\boldsymbol{\theta_t}))  
+</p>
 
 Where _**b<sub>0</sub>**_, _**b<sub>1</sub>**_, _**mu<sub>t</sub>**_, _**theta<sub>t</sub>**_, and _**Y<sub>t</sub>**_ are vectors with K elements, and the k-th element in the vector represents the value for the viral lineage k. The explanatory variable is time bin t, and the outcome variable _**Y<sub>t</sub>**_ represents the counts of respective viral lineages at t. In the model, the linear estimator _**mu<sub>t</sub>**_ consisting the intercept _**b<sub>0</sub>**_ and the slope _**b<sub>1</sub>**_ for t is converted to the simplex _**theta<sub>t</sub>**_, which represents the probability of occurrence of each viral lineage, by the softmax link function defined as:
 
+<p align="center">
 ![softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{1\lej\leJ}exp(\boldsymbol{x}_j)}](https://latex.codecogs.com/gif.latex?softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{j=1}^{J}exp(\boldsymbol{x}_j)})  
+</p>
 
 _**Y<sub>t</sub>**_ is generated from  _**theta<sub>t</sub>**_ and  N<sub>t</sub> representing the total count of all lineages at t, according to a Multinomial distribution.  
 
 Relative growth rate per generation (i.e., transmissibility) of respective viral lineages (_**r**_, a vector with K elements) was calculated according to the slope parameter _**b<sub>1</sub>**_ in the model above with the assumption of a fixed generation time. The growth rate _**r**_ was defined as:  
 
+<p align="center">
 ![\boldsymbol{r}=exp(\gamma/w\boldsymbol{b_1})](https://latex.codecogs.com/gif.latex?\boldsymbol{r}=exp(\gamma/w\boldsymbol{b_1}))  
+</p>
 
 Where  and  are the viral generation time (5.5 days) and the time bin size (3 days), respectively. For the parameter estimation, the intercept and slope parameters of the 1st lineage (i.e., viral lineage ID = 1) were fixed at 0. Consequently, the growth rates of respective lineages were estimated as those relative to that of the 1st lineage.  
 
