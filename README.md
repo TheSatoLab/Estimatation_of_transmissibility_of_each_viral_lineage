@@ -13,7 +13,7 @@ We modelled the transition of the relative frequency of K types of viral lineage
 
 
 
-![softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{1\lej\leJ}exp(\boldsymbol{x}_j)}](https://latex.codecogs.com/gif.latex?softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{1\lej\leJ}exp(\boldsymbol{x}_j)})  
+![softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{1\lej\leJ}exp(\boldsymbol{x}_j)}](https://latex.codecogs.com/gif.latex?softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{j=1}^{J}exp(\boldsymbol{x}_j)})  
 
 
 
