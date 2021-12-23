@@ -2,7 +2,6 @@
 
 library(tidyverse)
 library(cmdstanr)
-library(bayesplot)
 
 #hyper parameters
 bin.size <- 3
@@ -40,7 +39,6 @@ fit.stan <- multi_nomial_model$sample(
     iter_warmup=2000,
     seed=1234,
     parallel_chains = 4,
-    max_treedepth = 20,
     chains=4)
 
 
