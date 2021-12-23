@@ -1,4 +1,4 @@
-# Estimatation of the transmissibility of each viral lineage
+# Estimation of the transmissibility of each viral lineage
 
 ## Summary
 To estimate the relative transmissibility of each SARS-CoV-2 lineage, we established a statistical model representing the epidemic dynamics of each viral lineage based on the viral genomic surveillance data.  
@@ -6,7 +6,7 @@ To estimate the relative transmissibility of each SARS-CoV-2 lineage, we establi
 The input data is a count matrix representing the abundance of respective viral lineages (viral lineage ID k ∈ {1, 2, …, K}) in respective time bins (t ∈ {1, 2, …, T}).
 
 
-We modelled the transition of the relative frequency of K types of viral lineages with a Bayesian multinomial logistic model as below:  
+We modeled the transition of the relative frequency of K types of viral lineages with a Bayesian multinomial logistic model as below:  
 
 ![\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t](https://latex.codecogs.com/gif.latex?\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t)  
 ![\boldsymbol{\theta_t}=softmax(\boldsymbol{\mu_t})](https://latex.codecogs.com/gif.latex?\boldsymbol{\theta_t}=softmax(\boldsymbol{\mu_t}))  
