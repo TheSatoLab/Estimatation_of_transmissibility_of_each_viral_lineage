@@ -9,7 +9,7 @@ We modelled the transition of the relative frequency of K types of viral lineage
 ![\boldsymbol{\theta_t} = softmax(\boldsymbol{\mu_t})](https://latex.codecogs.com/gif.latex?\boldsymbol{\theta_t} = softmax(\boldsymbol{\mu_t}))  
 
 
-
+![\sum_{n=1}^{N}a_n](https://latex.codecogs.com/gif.latex?\sum_{n=1}^{N}a_n)
 
 
 
