@@ -23,10 +23,12 @@ Relative growth rate per generation (i.e., transmissibility) of respective viral
 
 ![\boldsymbol{r}=exp(\gamma/w\boldsymbol{b_1})](https://latex.codecogs.com/gif.latex?\boldsymbol{r}=exp(\gamma/w\boldsymbol{b_1}))  
 
-Where  and  are the viral generation time (5.5 days) and the time bin size (3 days), respectively. For the parameter estimation, the intercept and slope parameters of the 1st lineage (lineage ID = 1) were fixed at 0. Consequently, the growth rates of respective lineages were estimated as those relative to that of the 1st lineage.
+Where  and  are the viral generation time (5.5 days) and the time bin size (3 days), respectively. For the parameter estimation, the intercept and slope parameters of the 1st lineage (i.e., viral lineage ID = 1) were fixed at 0. Consequently, the growth rates of respective lineages were estimated as those relative to that of the 1st lineage.  
 Parameter estimation was performed by the framework of Bayesian statistical inference with Markov chain Monte Carlo methods (MCMC) implemented in Stan (https://mc-stan.org). Non-informative priors were set for all parameters. Four independent MCMC chains were run with 2,000 and 3,000 steps of warmup and sampling iterations, respectively.
 
-
-
-
-
+## Contents
+* script
+	* run_model.R
+	* multinomial.stan
+* input
+	* input.count_matrix.txt
