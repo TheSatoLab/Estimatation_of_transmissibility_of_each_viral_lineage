@@ -8,12 +8,12 @@ We modelled the transition of the relative frequency of K types of viral lineage
 
 ![\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t](https://latex.codecogs.com/gif.latex?\boldsymbol{\mu_t}=\boldsymbol{b_0}+\boldsymbol{b_1}t)  
 ![\boldsymbol{\theta_t}=softmax(\boldsymbol{\mu_t})](https://latex.codecogs.com/gif.latex?\boldsymbol{\theta_t}=softmax(\boldsymbol{\mu_t}))  
-![N_t=\sum_{1\lek\leK}\boldsymbol{Y_{tk}}](https://latex.codecogs.com/gif.latex?N_t=\sum_{1\lek\leK}\boldsymbol{Y_{tk}})  
+![N_t=\sum_{k=1}^{K}\boldsymbol{Y_{tk}}](https://latex.codecogs.com/gif.latex?N_t=\sum_{k=1}^{K}\boldsymbol{Y_{tk}})  
 ![softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{1\lej\leJ}exp(\boldsymbol{x}_j)}](https://latex.codecogs.com/gif.latex?softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{1\lej\leJ}exp(\boldsymbol{x}_j)})  
 
 
 
-N_t=\sum_{1\lek\leK}\boldsymbol{Y_{tk}}
+
 \boldsymbol{Y_t}~Multinomial(N_t,\boldsymbol{\theta_t})
 softmax(\boldsymbol{x})=\frac{exp(\boldsymbol{x})}{\sum_{1\lej\leJ}exp(\boldsymbol{x}_j)}
 
