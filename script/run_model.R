@@ -29,7 +29,7 @@ data.stan <- list(K = ncol(Y), # the number of viral lineages
                   X = X, # explanatory variables
                   Y = Y, # outcome variables
                   generation_time = generation_time, # viral generation time
-                  bin_size = bin.size, # time bin saize
+                  bin_size = bin.size, # time bin size
                   Y_sum = Y_sum.v # total count in each time points)
 
 #fitting
