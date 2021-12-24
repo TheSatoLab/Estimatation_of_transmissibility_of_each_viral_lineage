@@ -23,14 +23,14 @@ Y_sum.v <- apply(Y,1,sum)
 group.df <- data.frame(group_Id = 1:ncol(Y),
                          group = colnames(Y))
 
-data.stan <- list(K = ncol(Y),
-                  N = nrow(Y),
-                  D = 2,
-                  X = X,
-                  Y = Y,
-                  generation_time = generation_time,
-                  bin_size = bin.size,
-                  Y_sum = Y_sum.v)
+data.stan <- list(K = ncol(Y), # the number of viral lineages
+                  N = nrow(Y), # the number of time points
+                  D = 2, # the number of columns in design matrix
+                  X = X, # explanatory variables
+                  Y = Y, # outcome variables
+                  generation_time = generation_time, # viral generation time
+                  bin_size = bin.size, # time bin saize
+                  Y_sum = Y_sum.v # total count in each time points)
 
 #fitting
 fit.stan <- multi_nomial_model$sample(
