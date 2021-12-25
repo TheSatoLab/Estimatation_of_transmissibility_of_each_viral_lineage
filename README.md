@@ -28,6 +28,9 @@ Where  and  are the viral generation time (5.5 days) and the time bin size (3 da
 Parameter estimation was performed by the framework of Bayesian statistical inference with Markov chain Monte Carlo methods (MCMC) implemented in Stan (https://mc-stan.org). Non-informative priors were set for all parameters. Four independent MCMC chains were run with 2,000 and 3,000 steps of warmup and sampling iterations, respectively.  
 
 ## Contents
+* prepreprint
+	* The prepreprint of **"Attenuated fusogenicity and pathogenicity of SARS-CoV-2 Omicron variant"**
+
 * script
 	* **run_model.R:** main script
 	* **multinomial.stan:** stan model file
