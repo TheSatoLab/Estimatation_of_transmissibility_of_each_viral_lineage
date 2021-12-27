@@ -39,8 +39,8 @@ Parameter estimation was performed by the framework of Bayesian statistical infe
 	* **credible_interval.txt:** output file containing credible intervals
 
 ## Dependencies
-* R (3.6.3)
+* R (v3.6.3)
 * R packages:
-	* tidyverse (1.3.1)
-	* cmdstanr (0.4.0)
-
+	* tidyverse (v1.3.1)
+	* cmdstanr (v0.4.0)
+* CmdStan (v2.28.1)
