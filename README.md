@@ -1,4 +1,4 @@
-# Estimation of the transmissibility of each viral lineage
+# Estimation of the relative growth rate of each viral lineage
 
 ## Summary
 To estimate the relative growth rate of each SARS-CoV-2 lineage, we established a statistical model representing the epidemic dynamics of each viral lineage based on the viral genomic surveillance data.  
