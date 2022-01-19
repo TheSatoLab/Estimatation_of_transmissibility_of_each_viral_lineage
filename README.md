@@ -1,7 +1,7 @@
 # Estimation of the transmissibility of each viral lineage
 
 ## Summary
-To estimate the relative transmissibility of each SARS-CoV-2 lineage, we established a statistical model representing the epidemic dynamics of each viral lineage based on the viral genomic surveillance data.  
+To estimate the relative growth rate of each SARS-CoV-2 lineage, we established a statistical model representing the epidemic dynamics of each viral lineage based on the viral genomic surveillance data.  
 
 The input data is a count matrix representing the abundance of respective viral lineages (viral lineage ID k ∈ {1, 2, …, K}) in respective time bins (t ∈ {1, 2, …, T}).
 
@@ -19,13 +19,13 @@ Where _**b<sub>0</sub>**_, _**b<sub>1</sub>**_, _**mu<sub>t</sub>**_, _**theta<s
 
 _**Y<sub>t</sub>**_ is generated from  _**theta<sub>t</sub>**_ and  N<sub>t</sub> representing the total count of all lineages at t, according to a Multinomial distribution.  
 
-Relative growth rate per generation (i.e., transmissibility) of respective viral lineages (_**r**_, a vector with K elements) was calculated according to the slope parameter _**b<sub>1</sub>**_ in the model above with the assumption of a fixed generation time. The growth rate _**r**_ was defined as:  
+Relative growth rate per generation (i.e., viral spread rate in human population) of respective viral lineages (_**r**_, a vector with K elements) was calculated according to the slope parameter _**b<sub>1</sub>**_ in the model above with the assumption of a fixed generation time. The growth rate _**r**_ was defined as:  
 
 ![\boldsymbol{r}=exp(\gamma/w\boldsymbol{b_1})](https://latex.codecogs.com/gif.latex?\boldsymbol{r}=exp(\gamma/w\boldsymbol{b_1}))  
 
 Where  and  are the viral generation time (5.5 days) and the time bin size (3 days), respectively. For the parameter estimation, the intercept and slope parameters of the 1st lineage (i.e., viral lineage ID = 1) were fixed at 0. Consequently, the growth rates of respective lineages were estimated as those relative to that of the 1st lineage.  
 
-Parameter estimation was performed by the framework of Bayesian statistical inference with Markov chain Monte Carlo methods (MCMC) implemented in Stan (https://mc-stan.org). Non-informative priors were set for all parameters. Four independent MCMC chains were run with 2,000 and 3,000 steps of warmup and sampling iterations, respectively.  
+Parameter estimation was performed by the framework of Bayesian statistical inference with Markov chain Monte Carlo methods (MCMC) implemented in Stan (https://mc-stan.org). Non-informative priors were set for all parameters. Four independent MCMC chains were run with 2,000 and 4,000 steps of warmup and sampling iterations, respectively.  
 
 ## Contents
 * script

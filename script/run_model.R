@@ -35,8 +35,10 @@ data.stan <- list(K = ncol(Y), # the number of viral lineages
 #fitting
 fit.stan <- multi_nomial_model$sample(
     data=data.stan,
-    iter_sampling=3000,
+    iter_sampling=4000,
     iter_warmup=2000,
+    adapt_delta = 0.99,
+    max_treedepth = 20,
     seed=1234,
     parallel_chains = 4,
     chains=4)
